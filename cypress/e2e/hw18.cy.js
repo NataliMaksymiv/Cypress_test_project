@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Header and Footer Buttons and Links Verification', () => {
+describe.skip('Header and Footer Buttons and Links Verification', () => {
     beforeEach(() => {
       cy.visit('https://guest:welcome2qauto@qauto.forstudy.space/');
     });

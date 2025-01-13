@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) { },
-    //baseUrl: 'https://guest:welcome2qauto@qauto.forstudy.space/',
+    baseUrl: 'https://guest:welcome2qauto@qauto.forstudy.space/',
     //retries:{
     //   runMode: 2,
     //   openMode: 3
