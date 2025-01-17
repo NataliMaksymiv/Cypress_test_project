@@ -1,20 +1,13 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: "mochawesome",
-  reporterOptions: {
-    reportDir: "cypress/reports",
-    overwright: false,
-    html: false,
-    json: true
-  },
   e2e: {
     setupNodeEvents(on, config) { },
-    baseUrl: 'https://guest:welcome2qauto@qauto.forstudy.space/',
+    baseUrl: 'https://guest:welcome2qauto@qauto2.forstudy.space/',
     user:{
-      email: 'naty.maksymiv@gmail.com',
-      password: 'N04051985m'
-  },
+        email: 'naty.maksymiv+13@gmail.com',
+        password: 'Nata2024'
+    },
     //retries:{
     //   runMode: 2,
     //   openMode: 3
