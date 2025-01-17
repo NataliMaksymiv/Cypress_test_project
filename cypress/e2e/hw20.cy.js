@@ -5,7 +5,7 @@ import FuelExpensesPage from "../page-objects/pages/FuelExpensesPage";
 import AddAnExpenseForm from "../page-objects/forms/AddAnExpenseForm";
 import SidePannel from  "../page-objects/pages/SidePannel";
 
-describe.only('Adding car on Garage page', () => {
+describe('Adding car on Garage page', () => {
 
   beforeEach(() => {
     HomePage.open('/');
@@ -33,6 +33,9 @@ describe.only('Adding car on Garage page', () => {
       GaragePage.checkErrorMessage('Mileage has to be from 0 to 999999');
     });
 
+
+
+    
     it('should disable Add button when mileage exceed max value', () => {
       GaragePage.selectBrand('BMW');
       GaragePage.selectModel('X5');
@@ -127,7 +130,7 @@ describe('Negative cases for adding an expense form', () => {
     });
   });
   describe('Adding total cost on Add fuel expense', () => {
-    it.only('Verify total cost field for zero value', () => {
+    it('Verify total cost field for zero value', () => {
       GaragePage.createCar('Audi', 'TT', 111);
       GaragePage.clickAddFuelExpenseButton();
       AddAnExpenseForm.filltotalCost('0')
