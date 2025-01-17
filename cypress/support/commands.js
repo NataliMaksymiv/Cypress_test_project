@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+async function createExpense(carId, amount, description) {
+    const response = await request.post('https://qauto.forstudy.space/api/expenses', {
+      data: {
+        carId: carId,
+        amount: amount,
+        description: description,
+      },
+    });
+  
+    expect(response.status()).toBe(201);
+    const responseBody = await response.json();
+    expect(responseBody).toMatchObject({
+      carId: carId,
+      amount: amount,
+      description: description,
+    });
+  
+    return responseBody;
+  }
+  
