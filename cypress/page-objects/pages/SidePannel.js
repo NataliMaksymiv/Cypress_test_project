@@ -9,10 +9,15 @@ class SidePannel{
         return cy.get('.col-3 .sidebar').find('[href="/panel/instructions"]');
     }
     get profileButton(){
-        return cy.get('.col-3 .sidebar').find('[href="/panel/profile"]');
+        return cy.get('.sidebar').contains('.sidebar_btn-group', 'Profile');
     }
     get settingsButton(){
         return cy.get('.col-3 .sidebar').find('[href="/panel/settings"]');
     }
+
+    clickProfileButton(){
+        this.profileButton.click();
+    }
+    
 }
 export default new SidePannel();
